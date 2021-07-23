@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Engine index{% endblock %}
+
+{% block body %}
+    <h1>Engine index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>EngineType</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for engine in engines %}
+            <tr>
+                <td>{{ engine.id }}</td>
+                <td>{{ engine.engineType }}</td>
+                <td>
+                    <a href="{{ path('engine_show', {'id': engine.id}) }}">show</a>
+                    <a href="{{ path('engine_edit', {'id': engine.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('engine_new') }}">Create new</a>
+{% endblock %}

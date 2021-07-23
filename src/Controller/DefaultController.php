@@ -34,6 +34,9 @@ class DefaultController extends AbstractController
                 //'car' => $car,
                 //'users' => $users
             ]);
+
+            $this->denyAccessUnlessGranted('ROLE_ADMIN');
+
         }
         
 }
