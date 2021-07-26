@@ -20,22 +20,28 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-        ->add('lastName',TextType::class,[
-            'label' => 'Nom : ',
-            'label_attr'=>['class' => 'form-label'],
-            'attr'=>['class' => 'form-control'],
-            'constraints' => new Length(['min' => 3]),
-            'constraints' => new Length(['max' => 50]),
-        ])
-        ->add('firstName',TextType::class,[
-            'label' => 'Prénom : ',
-            'label_attr'=>['class' => 'form-label'],
-            'attr'=>['class' => 'form-control'],
-        ])
+            ->add('lastName',TextType::class,[
+                'label' => 'Nom : ',
+                'label_attr'=>['class' => 'form-label'],
+                'attr'=>['class' => 'form-control'],
+                'constraints' => new Length(['min' => 3]),
+                'constraints' => new Length(['max' => 50])
+            ])
+            ->add('firstName',TextType::class,[
+                'label' => 'Prénom : ',
+                'label_attr'=>['class' => 'form-label'],
+                'attr'=>['class' => 'form-control'],
+            ])
             ->add('birthDate', BirthdayType::class,[
                 'label' => 'Date de naissance : '
             ])
-            ->add('phone')
+            ->add('phone',TextType::class,[
+                'label' => 'N° de téléphone : ',
+                'label_attr'=>['class' => 'form-label'],
+                'attr'=>['class' => 'form-control'],
+                'constraints' => new Length(['min' => 3]),
+                'constraints' => new Length(['max' => 50])
+            ])
             ->add('email',EmailType::class,[
                 'label' => 'Email : ',
                 'label_attr'=>['class' => 'form-label'],

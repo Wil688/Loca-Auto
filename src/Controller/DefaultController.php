@@ -32,7 +32,7 @@ class DefaultController extends AbstractController
         
             return $this->render('default/admin.html.twig', [
                 //'car' => $car,
-                //'users' => $users
+                'users' => $users
             ]);
 
             $this->denyAccessUnlessGranted('ROLE_ADMIN');
