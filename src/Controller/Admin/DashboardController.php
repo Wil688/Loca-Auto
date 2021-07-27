@@ -57,6 +57,9 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Nombre de siège');
         yield MenuItem::linkToCrud('Liste', 'fas fa-car', Seat::class);
         yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Seat::class)->setAction('new');
+        // yield MenuItem::section('Image');
+        // yield MenuItem::linkToCrud('Liste', 'fas fa-car', Car::class);
+        // yield MenuItem::linkToCrud('Ajout', 'fas fa-user-plus', Car::class)->setAction('new');
         yield MenuItem::section();
         yield MenuItem::linkToLogout('Déconnexion', 'fa fa-sign-out-alt');
 

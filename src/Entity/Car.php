@@ -46,6 +46,11 @@ class Car
      */
     private $seatCar;
 
+    /**
+     * @ORM\Column(type="string", length=50)
+     */
+    private $image;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -107,6 +112,18 @@ class Car
     public function setSeatCar(?Seat $seatCar): self
     {
         $this->seatCar = $seatCar;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

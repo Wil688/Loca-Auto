@@ -27,6 +27,7 @@ class CarCrudController extends AbstractCrudController
             AssociationField::new('categorieCar' ,'Type'),
             AssociationField::new('engineCar' ,'Motorisation'),
             AssociationField::new('seatCar' ,'N° de siège'),
+            // AssociationField::new('image' ,'Image'),
             // TextField::new('plate' ,'Plaque d\'immatriculation'),
             // TextField::new('plate' ,'Plaque d\'immatriculation'),
             // TextEditorField::new('description'),
