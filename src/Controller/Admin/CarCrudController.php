@@ -6,6 +6,7 @@ use App\Entity\Car;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -27,7 +28,7 @@ class CarCrudController extends AbstractCrudController
             AssociationField::new('categorieCar' ,'Type'),
             AssociationField::new('engineCar' ,'Motorisation'),
             AssociationField::new('seatCar' ,'N° de siège'),
-            // AssociationField::new('image' ,'Image'),
+            ImageField::new('image' ,'Image'),
             // TextField::new('plate' ,'Plaque d\'immatriculation'),
             // TextField::new('plate' ,'Plaque d\'immatriculation'),
             // TextEditorField::new('description'),

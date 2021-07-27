@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\CarRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * @ORM\Entity(repositoryClass=CarRepository::class)
@@ -50,6 +52,35 @@ class Car
      * @ORM\Column(type="string", length=50)
      */
     private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
+
+    
+
+    public function setImageFile(File $image = null)
+    {
+        $this->imageFile = $image;
+
+    }
+
+    public function getImageFile()
+    {
+        return $this->imageFile;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
 
     public function getId(): ?int
     {
@@ -116,17 +147,17 @@ class Car
         return $this;
     }
 
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
+    // public function getImage(): ?string
+    // {
+    //     return $this->image;
+    // }
 
-    public function setImage(string $image): self
-    {
-        $this->image = $image;
+    // public function setImage(string $image): self
+    // {
+    //     $this->image = $image;
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
     
 
