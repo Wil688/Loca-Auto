@@ -17,22 +17,31 @@ class CarCrudController extends AbstractCrudController
         return Car::class;
     }
 
-    
+
     public function configureFields(string $pageName): iterable
     {
         return [
-        
-            TextField::new('plate' ,'Plaque d\'immatriculation'),
+
+            TextField::new('plate', 'Plaque d\'immatriculation'),
             // TextField::new('availability' ,'Disponibilité'),
-            AssociationField::new('brandCar' ,'Marque'),
-            AssociationField::new('categorieCar' ,'Type'),
-            AssociationField::new('engineCar' ,'Motorisation'),
-            AssociationField::new('seatCar' ,'N° de siège'),
-            ImageField::new('image' ,'Image'),
-            // TextField::new('plate' ,'Plaque d\'immatriculation'),
-            // TextField::new('plate' ,'Plaque d\'immatriculation'),
+            AssociationField::new('brandCar', 'Marque'),
+            AssociationField::new('categorieCar', 'Type'),
+            AssociationField::new('engineCar', 'Motorisation'),
+            AssociationField::new('seatCar', 'N° de siège'),
+            ImageField::new('image')
+                // ->setFormType(VichImageType::class, array(
+                //     'required' => false,
+                //     'allow_delete' => true, // not mandatory, default is true
+                //     'download_link' => true, // not mandatory, default is true
+                //     ))
+                ->setLabel('Image')
+                ->setUploadDir('public/assets/image')
+                ->setBasePath('public/assets/image'),
+
+            // ImageField::new('imageFile')
+            // ->setBasePath("public/assets/image")
+            // ->setLabel('Image'),
             // TextEditorField::new('description'),
         ];
     }
-
 }
