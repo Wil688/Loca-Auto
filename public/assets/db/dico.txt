@@ -1,0 +1,92 @@
+Dictionnaire de données 
+
+Nom : id
+Code : ID
+Type : AUTO_INCREMENT
+Taille : ,
+Commentaire : 
+
+Nom : email
+Code : EMAIL
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : roles
+Code : ROLES
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : password
+Code : PASSWORD
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : firstName
+Code : FIRSTNAME
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : lastName
+Code : LASTNAME
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : Phone
+Code : PHONE
+Type : VARCHAR
+Taille : 20,
+Commentaire : 
+
+Nom : birthDate
+Code : BIRTHDATE
+Type : DATE
+Taille : 20,
+Commentaire : 
+
+Nom : releaseDate
+Code : RELEASEDATE
+Type : DATETIME
+Taille : ,
+Commentaire : 
+
+Nom : returnDate
+Code : RETURNDATE
+Type : DATETIME
+Taille : ,
+Commentaire : 
+
+Nom : plate
+Code : PLATE
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : brandName
+Code : BRANDNAME
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : engineType
+Code : ENGINETYPE
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : type
+Code : TYPE
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : seatNumber
+Code : SEATNUMBER
+Type : INT
+Taille : ,
+Commentaire : 
+

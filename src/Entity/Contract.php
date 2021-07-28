@@ -35,7 +35,7 @@ class Contract
 
     /**
      * @ORM\ManyToOne(targetEntity=Car::class)
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $carContract;
 

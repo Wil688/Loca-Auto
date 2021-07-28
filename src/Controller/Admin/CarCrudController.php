@@ -5,9 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Car;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class CarCrudController extends AbstractCrudController
@@ -35,13 +33,12 @@ class CarCrudController extends AbstractCrudController
                 //     'download_link' => true, // not mandatory, default is true
                 //     ))
                 ->setLabel('Image')
-                ->setUploadDir('public/assets/image')
-                ->setBasePath('public/assets/image'),
-
-            // ImageField::new('imageFile')
-            // ->setBasePath("public/assets/image")
-            // ->setLabel('Image'),
-            // TextEditorField::new('description'),
+                ->setBasePath('assets/image/')
+                ->setUploadDir('public/assets/image/'),
+            ImageField::new('imageFile')
+                ->setLabel('Dossier Image')
+                ->setBasePath('assets/image/')
+                ->setUploadDir('public/assets/image/'),
         ];
     }
 }
